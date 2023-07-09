@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 894px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -131,7 +131,11 @@ input {
   }
 
   .titleHome {
-    font-size: 40px;
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 20px;
   }
 
   .form {
@@ -142,6 +146,7 @@ input {
 
   input {
     width: 100%;
+    font-size: 20px;
   }
 
   .btn-start {
