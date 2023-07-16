@@ -77,7 +77,6 @@ body {
     background-color: #10b02b;
     color: #FFF;
     border: none;
-    transform: scale(1.05);
     transition: ease-in-out 0.3s;
   }
 
