@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MasterQuiz</title>
     <link rel="stylesheet" href="./assets/play.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style> body {opacity: 0;} </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        gsap.to('body', { opacity: 1, duration: 1 });
+        });
+    </script>
 </head>
 <body>
     <div class="box">
@@ -13,11 +20,11 @@
             <div class="result" id="result"></div>
             <div class="navegation">
                 <span class="btn-navigation">
-                    <img src="./assets/img/back.svg" alt="Retornar" class="action-btn">
-                    <p>Voltar</p>
+                    <img src="./assets/img/back.svg" alt="Retornar" class="action-btn" onclick="backtohome()">
+                    <p>Início</p>
                 </span>
                 <span class="btn-navigation">
-                    <img src="./assets/img/restart.svg" alt="Reiniciar" class="action-btn">
+                    <img src="./assets/img/restart.svg" alt="Reiniciar" class="action-btn" onclick="restart()">
                     <p>Reiniciar</p>
                 </span>
             </div>

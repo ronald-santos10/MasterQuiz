@@ -1,3 +1,15 @@
+//iniciando com o home.html
+function start(){
+  const username = document.querySelector("#username").value;
+
+  if (username === ""){
+    alert("Por favor, insira um nome para começarmos");
+  }else {
+    window.location.href = "play.html"}
+}
+//iniciando com o home.html
+
+
 function PerguntaMolde(pergunta, alternativas, verdadeira) {
     this.pergunta = pergunta;
     this.alternativas = alternativas;
@@ -44,10 +56,14 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
     elemento.classList.add("selecionado");
     const perguntaAtual = perguntas[perguntaAtualIndex];
 
-    if (alternativaSelecionada === pergunta1.verdadeira) {
+    const exibirverdadeira = perguntaAtual.verdadeira
+
+    if (alternativaSelecionada === perguntaAtual.verdadeira) {
         elemento.classList.add("verdadeiro");
+        console.log("resposta correta")
       } else {
         elemento.classList.add("falso");
+        console.log("resposta incorreta")
       }
       setTimeout(proximaPergunta, 1000);
   }
@@ -56,7 +72,7 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
     perguntaAtualIndex++;
   
     if (perguntaAtualIndex >= perguntas.length) {
-      result.innerHTML = "<h1>Fim do questionário!</h1>";
+      restart();
     } else {
       exibirPerguntaAtual();
     }
@@ -64,3 +80,15 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
   
   exibirPerguntaAtual();
   
+
+  function backtohome(){
+    window.location.href = "home.html"
+  }
+
+  function restart(){
+    window.location.href = "play.html"
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    gsap.to('body', { opacity: 1, duration: 1 });
+  });

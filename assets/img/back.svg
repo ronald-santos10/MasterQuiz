@@ -1,4 +1,9 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="11.7216" cy="11.8605" rx="11.7216" ry="11.8234" fill="#686868"/>
-<path d="M11.7216 5.94884L12.7656 6.98338L8.663 11.1216L17.5824 11.1216L17.5824 12.5995L8.663 12.5995L12.7656 16.7377L11.7216 17.7722L5.86081 11.8605L11.7216 5.94884Z" fill="white"/>
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="28" cy="28" r="28" fill="#686868"/>
+<mask id="mask0_6_23" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="11" width="35" height="35">
+<rect x="10" y="11" width="35" height="35" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_6_23)">
+<path d="M18.75 38.7083H23.125V29.9583H31.875V38.7083H36.25V25.5833L27.5 19.0208L18.75 25.5833V38.7083ZM15.8333 41.625V24.125L27.5 15.375L39.1666 24.125V41.625H28.9583V32.875H26.0416V41.625H15.8333Z" fill="white"/>
+</g>
 </svg>
