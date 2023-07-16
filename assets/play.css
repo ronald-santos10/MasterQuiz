@@ -57,7 +57,7 @@ body {
     gap: 11px;
 }
 
-li {
+.item {
     border-radius: 5px;
     border: 1px solid #767676;
     background: rgba(241, 241, 241, 0.44);
@@ -68,21 +68,25 @@ li {
     padding: 10px;
 }
 
-button {
-    cursor: pointer;
-    border-radius: 5px;
-    background: #143164;
+.selecionado {
+    background-color: #143164;
     color: #FFF;
-    font-family: Poppins;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 10px;
-}
+  }
 
-button:hover {
-    background: #005eff;
-    transition: ease-in-out 0.5s;
-}
+  .verdadeiro {
+    background-color: #10b02b;
+    color: #FFF;
+    border: none;
+    transform: scale(1.05);
+    transition: ease-in-out 0.3s;
+  }
+
+  .falso {
+    background-color: #FF002B;
+    color: #FFF;
+    border: none;
+    transition: ease-in-out 0.3s;
+  }
 
 .navegation {
     margin-top: 30px;
