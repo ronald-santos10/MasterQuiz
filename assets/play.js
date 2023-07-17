@@ -72,7 +72,7 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
     perguntaAtualIndex++;
   
     if (perguntaAtualIndex >= perguntas.length) {
-      restart();
+      backtohome();
     } else {
       exibirPerguntaAtual();
     }
@@ -82,7 +82,7 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
   
 
   function backtohome(){
-    window.location.href = "home.html"
+    window.location.href = "index.html"
   }
 
   function restart(){
