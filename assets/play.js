@@ -27,7 +27,17 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
     pergunta7 = new PerguntaMolde("Qual o vice campeão da copa do mundo de 2018?", {a: "Inglaterra", b: "Belgica", c: "Croacia", d: "Alemanha"}, "c"),
     pergunta8 = new PerguntaMolde("Em que ano o Brasil entrou na segunda guerra mundial?", {a: "1942", b: "1940", c: "1944", d: "1937"}, "a"),
     pergunta9 = new PerguntaMolde("Quantos elementos quimicos existem na tabela periódica?", {a: "108", b: "112", c: "118", d: "111"}, "c"),
-    pergunta10 = new PerguntaMolde("Qual o maior país do continente africano?", {a: "Argélia", b: "Egito", c: "Nigéria", d: "Africa do Sul"}, "c")
+    pergunta10 = new PerguntaMolde("Qual o maior país do continente africano?", {a: "Argélia", b: "Egito", c: "Nigéria", d: "Africa do Sul"}, "c"),
+    pergunta11 = new PerguntaMolde("Quem foi o primeiro presidente dos Estados Unidos?", {a: "George Washington", b: "Thomas Jefferson", c: "Abraham Lincoln", d: "Franklin D. Roosevelt"}, "a"),
+    pergunta12 = new PerguntaMolde("Qual é o maior planeta do sistema solar?", {a: "Júpiter", b: "Saturno", c: "Netuno", d: "Urano"}, "a"),
+    pergunta13 = new PerguntaMolde("Quem escreveu a famosa obra 'Romeu e Julieta'?", {a: "William Shakespeare", b: "Charles Dickens", c: "Jane Austen", d: "Mark Twain"}, "a"),
+    pergunta14 = new PerguntaMolde("Qual é o país com a maior população do mundo?", {a: "Índia", b: "Brasil", c: "Estados Unidos", d: "China"}, "d"),
+    pergunta15 = new PerguntaMolde("Qual é o maior oceano da Terra?", {a: "Oceano Atlântico", b: "Oceano Índico", c: "Oceano Pacífico", d: "Oceano Ártico"}, "c"),
+    pergunta16 = new PerguntaMolde("Quem pintou a obra 'Mona Lisa'?", {a: "Vincent van Gogh", b: "Leonardo da Vinci", c: "Pablo Picasso", d: "Michelangelo"}, "b"),
+    pergunta17 = new PerguntaMolde("Qual é a capital da Austrália?", {a: "Sydney", b: "Melbourne", c: "Brisbane", d: "Camberra"}, "d"),
+    pergunta18 = new PerguntaMolde("Quem foi o primeiro ser humano a pisar na Lua?", {a: "Buzz Aldrin", b: "Neil Armstrong", c: "Yuri Gagarin", d: "Alan Shepard"}, "b"),
+    pergunta19 = new PerguntaMolde("Qual é o maior deserto do mundo?", {a: "Deserto do Saara", b: "Deserto de Gobi", c: "Deserto de Atacama", d: "Deserto da Namíbia"}, "a"),
+    pergunta20 = new PerguntaMolde("Qual é a montanha mais alta do mundo?", {a: "Monte Kilimanjaro", b: "Monte Everest", c: "Monte McKinley", d: "Monte Vinson"}, "b")
   ];
   // CRIANDO AS PERGUNTAS
 
