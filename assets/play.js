@@ -42,20 +42,23 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
   // CRIANDO AS PERGUNTAS
 
   let perguntaAtualIndex = 0;
+  
 
   function exibirPerguntaAtual() {
     const perguntaAtual = perguntas[perguntaAtualIndex];
     const result = document.querySelector('#result');
-    result.innerHTML = `
+    result.innerHTML= `
       <h1 class="question">${perguntaAtual.pergunta}</h1>
       <div class="alternatives">
-        <div class="item" onclick="selecionarItem(this, 'a')">a) ${perguntaAtual.alternativas.a}</div>
-        <div class="item" onclick="selecionarItem(this, 'b')">b) ${perguntaAtual.alternativas.b}</div>
-        <div class="item" onclick="selecionarItem(this, 'c')">c) ${perguntaAtual.alternativas.c}</div>
-        <div class="item" onclick="selecionarItem(this, 'd')">d) ${perguntaAtual.alternativas.d}</div>
+        <div class="item" onclick="selecionarItem(this, 'a')" data-alternativa="a">a) ${perguntaAtual.alternativas.a}</div>
+        <div class="item" onclick="selecionarItem(this, 'b')" data-alternativa="b">b) ${perguntaAtual.alternativas.b}</div>
+        <div class="item" onclick="selecionarItem(this, 'c')" data-alternativa="c">c) ${perguntaAtual.alternativas.c}</div>
+        <div class="item" onclick="selecionarItem(this, 'd')" data-alternativa="d">d) ${perguntaAtual.alternativas.d}</div>
       </div>
     `;
   }
+
+  let acertos = 0
   
   function selecionarItem(elemento, alternativaSelecionada) {
     var itens = document.getElementsByClassName("item");
@@ -65,31 +68,43 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
   
     elemento.classList.add("selecionado");
     const perguntaAtual = perguntas[perguntaAtualIndex];
-
-    const exibirverdadeira = perguntaAtual.verdadeira
-
+  
     if (alternativaSelecionada === perguntaAtual.verdadeira) {
-        elemento.classList.add("verdadeiro");
-        console.log("resposta correta")
-      } else {
-        elemento.classList.add("falso");
-        console.log("resposta incorreta")
+      elemento.classList.add("verdadeiro");
+      acertos++;
+      console.log("resposta correta");
+    } else {
+      elemento.classList.add("falso");
+      console.log("resposta incorreta");
+  
+      const alternativas = elemento.parentElement.getElementsByClassName("item");
+      for (var i = 0; i < alternativas.length; i++) {
+        if (alternativas[i].textContent.includes(perguntaAtual.verdadeira)) {
+          alternativas[i].classList.add("verdadeiro");
+          break;
+        }
       }
-      setTimeout(proximaPergunta, 1000);
+    }
+  
+    setTimeout(proximaPergunta, 1000);
+    console.log("Acertos: " + acertos + "/" + perguntas.length);
   }
 
   function proximaPergunta() {
     perguntaAtualIndex++;
   
     if (perguntaAtualIndex >= perguntas.length) {
-      backtohome();
+      if(acertos >= (perguntas.length / 2)){
+        alert("Parabéns, sua pontuação foi de " + acertos + "/" + perguntas.length)
+      }else{
+        alert("Tente novamente, sua pontuação foi de " + acertos + "/" + perguntas.length)
+      }backtohome()
     } else {
       exibirPerguntaAtual();
     }
   }
   
   exibirPerguntaAtual();
-  
 
   function backtohome(){
     window.location.href = "index.html"
@@ -98,6 +113,7 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
   function restart(){
     window.location.href = "play.html"
   }
+
 
   document.addEventListener('DOMContentLoaded', function() {
     gsap.to('body', { opacity: 1, duration: 1 });
