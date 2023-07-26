@@ -17,28 +17,28 @@ function PerguntaMolde(pergunta, alternativas, verdadeira) {
   }
   
   // CRIANDO AS PERGUNTAS
-  const perguntas = [
-    pergunta1 = new PerguntaMolde("Quem inventou a Lâmpada?", {a: "Nikola Tesla", b: "Thomas Edson", c: "Darwin", d: "Henry Ford"}, "b"),
-    pergunta2 = new PerguntaMolde("Quantas linhas tem no logo do serviço de streaming de música Spotify?", {a: "2 linhas", b: "3 linhas", c: "4 linhas", d: "5 linhas"}, "b"),
-    pergunta3 = new PerguntaMolde("O finlandês é uma lingua", {a: "Uralica", b: "Camita", c: "Semita", d: "Indo-europeia"}, "d"),
-    pergunta4 = new PerguntaMolde("Como se chama o tempo de um verbo puro, sem tempo definido?", {a: "Pretérito", b: "Aoristo", c: "Puro", d: "imaculado"}, "b"),
-    pergunta5 = new PerguntaMolde("Qual a moeda oficial do Reino Unido?", {a: "Peso", b: "Euro", c: "Libra Esterlina", d: "Franco"}, "c"),
-    pergunta6 = new PerguntaMolde("Qual o menor osso do corpo humano?", {a: "Bigorna", b: "Metacarpo", c: "Martelo", d: "Estribo"}, "d"),
-    pergunta7 = new PerguntaMolde("Qual o vice campeão da copa do mundo de 2018?", {a: "Inglaterra", b: "Belgica", c: "Croacia", d: "Alemanha"}, "c"),
-    pergunta8 = new PerguntaMolde("Em que ano o Brasil entrou na segunda guerra mundial?", {a: "1942", b: "1940", c: "1944", d: "1937"}, "a"),
-    pergunta9 = new PerguntaMolde("Quantos elementos quimicos existem na tabela periódica?", {a: "108", b: "112", c: "118", d: "111"}, "c"),
-    pergunta10 = new PerguntaMolde("Qual o maior país do continente africano?", {a: "Argélia", b: "Egito", c: "Nigéria", d: "Africa do Sul"}, "c"),
-    pergunta11 = new PerguntaMolde("Quem foi o primeiro presidente dos Estados Unidos?", {a: "George Washington", b: "Thomas Jefferson", c: "Abraham Lincoln", d: "Franklin D. Roosevelt"}, "a"),
-    pergunta12 = new PerguntaMolde("Qual é o maior planeta do sistema solar?", {a: "Júpiter", b: "Saturno", c: "Netuno", d: "Urano"}, "a"),
-    pergunta13 = new PerguntaMolde("Quem escreveu a famosa obra 'Romeu e Julieta'?", {a: "William Shakespeare", b: "Charles Dickens", c: "Jane Austen", d: "Mark Twain"}, "a"),
-    pergunta14 = new PerguntaMolde("Qual é o país com a maior população do mundo?", {a: "Índia", b: "Brasil", c: "Estados Unidos", d: "China"}, "d"),
-    pergunta15 = new PerguntaMolde("Qual é o maior oceano da Terra?", {a: "Oceano Atlântico", b: "Oceano Índico", c: "Oceano Pacífico", d: "Oceano Ártico"}, "c"),
-    pergunta16 = new PerguntaMolde("Quem pintou a obra 'Mona Lisa'?", {a: "Vincent van Gogh", b: "Leonardo da Vinci", c: "Pablo Picasso", d: "Michelangelo"}, "b"),
-    pergunta17 = new PerguntaMolde("Qual é a capital da Austrália?", {a: "Sydney", b: "Melbourne", c: "Brisbane", d: "Camberra"}, "d"),
-    pergunta18 = new PerguntaMolde("Quem foi o primeiro ser humano a pisar na Lua?", {a: "Buzz Aldrin", b: "Neil Armstrong", c: "Yuri Gagarin", d: "Alan Shepard"}, "b"),
-    pergunta19 = new PerguntaMolde("Qual é o maior deserto do mundo?", {a: "Deserto do Saara", b: "Deserto de Gobi", c: "Deserto de Atacama", d: "Deserto da Namíbia"}, "a"),
-    pergunta20 = new PerguntaMolde("Qual é a montanha mais alta do mundo?", {a: "Monte Kilimanjaro", b: "Monte Everest", c: "Monte McKinley", d: "Monte Vinson"}, "b")
-  ];
+  const perguntas = [];
+
+  perguntas.push(new PerguntaMolde("Quem foi o autor da teoria da relatividade?", {a: "Isaac Newton", b: "Albert Einstein", c: "Galileu Galilei", d: "Marie Curie"}, "b"))
+  perguntas.push(new PerguntaMolde("Qual é o país com a maior população do mundo?", {a: "Brasil", b: "Estados Unidos", c: "China", d: "Índia"}, "d"))
+  perguntas.push(new PerguntaMolde(`Quem escreveu a peça de teatro "Romeu e Julieta"?`, {a: "William Shakespeare", b: "Charles Dickens", c: "Jane Austen", d: "Mark Twain"}, "a"))
+  perguntas.push(new PerguntaMolde("Qual é o elemento químico mais abundante na crosta terrestre?", {a: "Ferro", b: "Oxigênio", c: "Carbono", d: "Silício"}, "b"))
+  perguntas.push(new PerguntaMolde("Quem foi o primeiro ser humano a pisar na Lua?", {a: "Neil Armstrong", b: "Buzz Aldrin", c: "Yuri Gagarin", d: "John Glenn"}, "a"))
+  perguntas.push(new PerguntaMolde("Qual é o maior planeta do sistema solar?", {a: "Terra", b: "Marte", c: "Saturno", d: "Júpiter"}, "d"))
+  perguntas.push(new PerguntaMolde(`Quem pintou a famosa obra "Mona Lisa"?`, {a: "Pablo Picasso", b: "Vincent van Gogh", c: "Leonardo da Vinci", d: "Michelangelo"}, "c"))
+  perguntas.push(new PerguntaMolde("Qual é a montanha mais alta do mundo?", {a: "Everest", b: "K2", c: "Aconcágua", d: "Denali"}, "a"))
+  perguntas.push(new PerguntaMolde("Quem foi o primeiro presidente do Brasil?", {a: "Getúlio Vargas", b: "Juscelino Kubitschek", c: "Marechal Deodoro da Fonseca", d: "Dom Pedro I"}, "c"))
+  perguntas.push(new PerguntaMolde("Qual é o livro mais vendido da história, excluindo textos religiosos?", {a: "O Pequeno Príncipe", b: "Dom Quixote", c: "Harry Potter e a Pedra Filosofal", d: "O Senhor dos Anéis: O Retorno do Rei"}, "b"))
+  perguntas.push(new PerguntaMolde("Em que ano teve início a Segunda Guerra Mundial?", {a: "1914", b: "1939", c: "1945", d: "1950"}, "b"))
+  perguntas.push(new PerguntaMolde("Quem foi o cientista que formulou a teoria da evolução das espécies?", {a: "Sigmund Freud", b: "Albert Einstein", c: "Charles Darwin", d: "Isaac Newton"}, "c"))
+  perguntas.push(new PerguntaMolde("Qual é a velocidade da luz no vácuo?", {a: "300.000 km/s", b: "150.000 km/s", c: "200.000 km/s", d: "250.000 km/s"}, "a"))
+  perguntas.push(new PerguntaMolde("Quais são os quatro elementos clássicos da natureza, de acordo com a filosofia grega antiga?", {a: "Água, Fogo, Terra e Vento", b: "Terra, Ar, Fogo e Metal", c: "Água, Ar, Terra e Madeira", d: "Terra, Fogo, Ar e Água"}, "d"))
+  perguntas.push(new PerguntaMolde(`Quem escreveu a obra "1984", que descreve uma sociedade distópica?`, {a: "George Orwell", b: "Aldous Huxley", c: "Ray Bradbury", d: "H.G. Wells"}, "a"))
+  perguntas.push(new PerguntaMolde(`Qual é o autor da obra "A Divina Comédia"?`, {a: "Dante Alighieri", b: "Miguel de Cervantes", c: "Giovanni Boccaccio", d: "William Shakespeare"}, "a"))
+  perguntas.push(new PerguntaMolde("Quem foi o fundador da Microsoft?", {a: "Jeff Bezos", b: "Steve Jobs", c: "Bill Gates", d: "Mark Zuckerberg"}, "c"))
+  perguntas.push(new PerguntaMolde("Qual é o nome da teoria que descreve a origem do universo a partir de uma grande explosão?", {a: "Teoria da Gravitação Universal", b: "Teoria da Relatividade Geral", c: "Teoria da Evolução", d: "Teoria do Big Bang"}, "d"))
+  perguntas.push(new PerguntaMolde("Qual é a fórmula química da água?", {a: "H2O", b: "CO2", c: "O2", d: "NaCl"}, "a"))
+  perguntas.push(new PerguntaMolde("Quem foi o líder político sul-africano que lutou contra o apartheid e se tornou o primeiro presidente negro do país?", {a: "Nelson Mandela", b: "Mahatma Gandhi", c: "Martin Luther King Jr.", d: "Malcolm X"}, "a"))
   // CRIANDO AS PERGUNTAS
 
   let perguntaAtualIndex = 0;
